@@ -6,7 +6,7 @@ Sub MacroHideLOLColumns()
         columnString = Replace(Split(Columns(I).Address, ":")(0), "$", "")
         'check the value in row 3 of this column and hide the column based on some value
         If Range(columnString & "3").Value = "LOL" Then
-            Columns(Columns(I).Address).Hidden = True
+            Columns(columnString).Hidden = True
         End If
     Next I
 
